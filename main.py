@@ -154,6 +154,7 @@ for row in advanced_qb_stat_rows_playtype:
             QB_STATS[qb_name][5] = qb_pa_rate
 
 
+# Need to tidy up these function titles and axe labels
 MakeScatterPlot(1, 2, '2022 QB Pressure and on Target Throw Rates', 'Pressure Rate(%)', 'On Target Throw Rate(%)')
 MakeScatterPlot(1, 3, '2022 QB Pressure Rates and Ratings', 'Pressure Rate(%)', 'Quarterback Rating')
 MakeScatterPlot(4, 6, '2022 QB RPO Pass Attempt Rates and Adjusted Yards Per Attempt', 'RPO Pass Attempt Rate(%)', 'Adjusted Yards Per Attempt')
