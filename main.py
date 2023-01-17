@@ -51,13 +51,14 @@ def MakeScatterPlot(stat_index_1, stat_index_2, title, x_label, y_label):
     adjust_text(texts, expand_points = (1.0, 2.3), autoalign = 'y', precision = 0.001,
                 arrowprops = dict(arrowstyle = '-', color = 'gray', lw = 1.25))
 
-    plt.axvline(x=np.average(x), color='r', linestyle='--', label="red line", lw=0.5)
-    plt.axhline(y=np.average(y), color='b', linestyle='--', label="blue line", lw=0.5)
+    plt.axvline(x=np.median(x), color='r', linestyle='--', label="red line", lw=0.5)
+    plt.axhline(y=np.median(y), color='b', linestyle='--', label="blue line", lw=0.5)
 
     plt.title(title)
     plt.xlabel(x_label)
     plt.ylabel(y_label)
 
+    # plt.savefig("plot.jpg", dpi = 300, bbox_inches = "tight")
     plt.show()
 
 
@@ -155,9 +156,9 @@ for row in advanced_qb_stat_rows_playtype:
 
 
 # Need to tidy up these function titles and axe labels
-MakeScatterPlot(1, 2, '2022 QB Pressure and on Target Throw Rates', 'Pressure Rate(%)', 'On Target Throw Rate(%)')
-MakeScatterPlot(1, 3, '2022 QB Pressure Rates and Ratings', 'Pressure Rate(%)', 'Quarterback Rating')
-MakeScatterPlot(4, 6, '2022 QB RPO Pass Attempt Rates and Adjusted Yards Per Attempt', 'RPO Pass Attempt Rate(%)', 'Adjusted Yards Per Attempt')
-MakeScatterPlot(5, 6, '2022 QB Play-Action Pass Attempt Rates and Adjusted Yards Per Attempt', 'Play-Action Pass Attempt Rate(%)', 'Adjusted Yards Per Attempt')
+MakeScatterPlot(1, 2, '2022 NFL QB Accuracy and Pressure Rates', 'Pressure Rate(%)', 'On-target Throw Rate(%)')
+MakeScatterPlot(1, 3, '2022 NFL QB Ratings and Pressure Rates', 'Pressure Rate(%)', 'Quarterback Rating')
+MakeScatterPlot(4, 6, '2022 NFL QB Adjusted Yards Per Attempt and RPO Pass Rates', 'RPO Pass Attempt Rate(%)', 'Adjusted Yards Per Attempt')
+MakeScatterPlot(5, 6, '2022 NFL QB Adjusted Yards Per Attempt and Play-action Pass Rates', 'Play-action Pass Attempt Rate(%)', 'Adjusted Yards Per Attempt')
 
 
